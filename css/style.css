@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.navbar {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffb400;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navbar ul li a:hover {
+    color: #ffb400;
+}
+
+.hero {
+    height: 80vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("../images/hero.jpg")
+        center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffb400;
+    color: #1a1a2e;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #ffc933;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #2a2a4a;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 25px 0;
+    font-size: 30px;
+    color: #1a1a2e;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    padding: 0 30px 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+.car-card .car-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.car-card h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: #1a1a2e;
+}
+
+.car-card .brand {
+    color: #777;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.car-card .price {
+    font-size: 18px;
+    color: #ffb400;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.car-card p.desc {
+    font-size: 14px;
+    color: #555;
+    flex: 1;
+    margin-bottom: 12px;
+}
+
+.form-box {
+    background-color: #fff;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1a1a2e;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box input[type="number"],
+.form-box input[type="date"],
+.form-box textarea,
+.form-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+    outline: none;
+    border-color: #ffb400;
+}
+
+.form-box .btn {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.form-box .link {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.form-box .link a {
+    color: #ffb400;
+    font-weight: bold;
+}
+
+.message {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 12px 16px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.message.success { background-color: #d4edda; color: #155724; }
+.message.error   { background-color: #f8d7da; color: #721c24; }
+
+.unavailable-box {
+    background-color: #fff3cd;
+    border-left: 4px solid #ff9800;
+    color: #663c00;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 18px 0 10px 0;
+}
+
+.unavailable-box h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #663c00;
+}
+
+.unavailable-box ul {
+    list-style: disc;
+    padding-left: 22px;
+    font-size: 14px;
+}
+
+.unavailable-box .hint {
+    margin-top: 8px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.available-box {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+    color: #155724;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 18px 0 10px 0;
+    font-weight: 500;
+}
+
+.table-wrap {
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.table-wrap h2 { margin-bottom: 15px; color: #1a1a2e; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+table th {
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+table tr:hover td {
+    background-color: #f9f9f9;
+}
+
+.action-link {
+    color: #1a1a2e;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.action-link.delete { color: #d9534f; }
+button.action-link { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; }
+.action-link:hover  { text-decoration: underline; }
+
+.footer {
+    background-color: #1a1a2e;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.admin-bar {
+    background-color: #16213e;
+    color: #fff;
+    padding: 14px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-bar a { color: #ffb400; margin-left: 14px; font-weight: 500; }
+
+@media (max-width: 600px) {
+    .navbar { flex-direction: column; gap: 10px; }
+    .navbar ul { gap: 12px; }
+    .hero h1 { font-size: 34px; }
+    .hero p  { font-size: 16px; }
+}
